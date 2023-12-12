@@ -8,8 +8,8 @@
 - It can't be executed until the API is running
 
 # demo
-- this is the API. It needs to be started using gradle or from your favourite IDE.
-- the data will be saved on a database in memory (H2)
+- This is the API. It needs to be started using gradle or from your favourite IDE.
+- The data will be saved on a database in memory (H2)
 
 ## Useful commands for the API project
 - ./gradlew clean build
