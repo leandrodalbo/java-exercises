@@ -5,7 +5,7 @@
 # csvloader
 
 - This little App is in charge of reading the csv file within the resources folder and send all the data on a POST request
-- It can't be executed un the API is running
+- It can't be executed until the API is running
 
 # demo
 - this is the API. It needs to be started using gradle or from your favourite IDE.
