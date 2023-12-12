@@ -54,10 +54,10 @@ public class CSVModelRepositoryTest {
 
     @Test
     public void shouldFindItByCustomerRef() {
-        var result = repository.findById(2L);
+        var result = repository.findByCustomerRef(2L);
 
-        assertThat(result.get().getCustomerRef()).isEqualTo(2L);
-        assertThat(result.get().getCustomerName()).isEqualTo("customer-y");
+        assertThat(result.getCustomerRef()).isEqualTo(2L);
+        assertThat(result.getCustomerName()).isEqualTo("customer-y");
 
     }
 }

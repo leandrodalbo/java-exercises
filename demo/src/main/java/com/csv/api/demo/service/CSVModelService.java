@@ -5,7 +5,6 @@ import com.csv.api.demo.repository.CSVModelRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class CSVModelService {
@@ -19,10 +18,7 @@ public class CSVModelService {
         repository.saveAll(items);
     }
 
-    public CSVModel findByCustomerRef(long customerRef) {
-
-        Optional<CSVModel> queryResult = repository.findById(customerRef);
-
-        return queryResult.get();
+    public CSVModel findByCustomerRef(Long customerRef) {
+        return repository.findByCustomerRef(customerRef);
     }
 }

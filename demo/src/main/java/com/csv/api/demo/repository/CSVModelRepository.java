@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CSVModelRepository extends CrudRepository<CSVModel, Long> {
 
+    CSVModel findByCustomerRef(Long customerRef);
 }

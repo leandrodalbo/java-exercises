@@ -57,7 +57,7 @@ public class CSVModelControllerTest {
     public void willFindItUsingCustomerRef() throws Exception {
         when(service.findByCustomerRef(anyLong())).thenReturn(values.get(0));
 
-        mvc.perform(get("/csv/3")
+        mvc.perform(get("/csv/data?customerRef=3")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().is2xxSuccessful());
 

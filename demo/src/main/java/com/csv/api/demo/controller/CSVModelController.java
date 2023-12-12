@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/csv")
 public class CSVModelController {
 
@@ -24,8 +24,8 @@ public class CSVModelController {
         service.saveMany(items);
     }
 
-    @GetMapping("/{customerRef}")
-    public CSVModel findByCustomerRef(@PathVariable Long customerRef) {
+    @GetMapping("/data")
+    public CSVModel findByCustomerRef(@RequestParam Long customerRef) {
         return service.findByCustomerRef(customerRef);
     }
 

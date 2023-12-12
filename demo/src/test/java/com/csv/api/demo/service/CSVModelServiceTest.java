@@ -42,11 +42,11 @@ public class CSVModelServiceTest {
 
     @Test
     public void willFindItByCustomerRef() {
-        when(repository.findById(any())).thenReturn(Optional.of(items.get(0)));
+        when(repository.findByCustomerRef(any())).thenReturn(items.get(0));
 
         CSVModel result = service.findByCustomerRef(3L);
 
         assertThat(result).isEqualTo(items.get(0));
-        verify(repository, times(1)).findById(any());
+        verify(repository, times(1)).findByCustomerRef(any());
     }
 }
